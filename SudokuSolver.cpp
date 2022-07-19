@@ -23,10 +23,9 @@ bool Solveboard(int board[N][N])
         if (valid(board, row, col, x)) // Checks for particular x it is valid or not to assign 
         {
             board[row][col] = x;  
-            if (Solveboard(board)) // Return, if success -Recursively checks for other locations in board
+            if (Solveboard(board)) // Recursively checks for other locations in board
                 return true;
  
-            // If above if statment fails we can't assign that x ,so try again for next x
             board[row][col] = UNASSIGNED;
         }
     }
@@ -78,7 +77,7 @@ bool valid(int board[N][N], int row,int col, int x)
     
     /* Check if x is not already placed in current row, current column and current 3x3 box */
     return !isPresentInRow(board, row, x) && !isPresentInCol(board, col, x) && 
-    !isPresentInBox(board, row - row % 3,col - col % 3, x) && board[row][col] == UNASSIGNED;
+     !isPresentInBox(board, row - row % 3,col - col % 3, x) && board[row][col] == UNASSIGNED;
 }
 
  
