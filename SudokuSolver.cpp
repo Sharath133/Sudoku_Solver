@@ -4,11 +4,11 @@ using namespace std;
 #define UNASSIGNED 0
 #define N 9
  
-// This function that finds position in grid that is still unassigned
+// This function finds position in board that is still unassigned
 bool UnassignedLocation(int board[N][N],int& row, int& coln);
  
-// This funcion checks whether it is safe to assign x to given row,column 
-bool Safe(int board[N][N], int row,int coln, int x);
+// This funcion checks whether it is valid to assign x to given row,column 
+bool safe(int board[N][N], int row,int coln, int x);
  
 /* This function attempts to assign values to all unassigned locations in 
 such a way to meet the requirements for Sudoku solution  */
