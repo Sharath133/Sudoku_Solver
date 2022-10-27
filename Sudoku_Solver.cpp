@@ -101,11 +101,11 @@ int main()
                        { 0, 0, 0, 4, 1, 9, 0, 0, 5 },
                        { 0, 0, 0, 0, 8, 0, 0, 7, 9 } };
                        
-    for(int i=0;i<N;i++){
+    /*for(int i=0;i<N;i++){
         for(int j=0;j<N;j++){
         cin>>board[i][j];
         }
-    }
+    } */
     if (Solveboard(board) == true)
         printboard(board);
     else
